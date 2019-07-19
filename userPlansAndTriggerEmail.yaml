@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  userPlansAndTriggerEmail:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda.handler
+      Runtime: nodejs8.10
+      CodeUri: .
+      Description: ''
+      MemorySize: 1024
+      Timeout: 63
+      Role: 'arn:aws:iam::575789547500:role/ProductLambdaRole'
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /saveuserplan
+            Method: POST

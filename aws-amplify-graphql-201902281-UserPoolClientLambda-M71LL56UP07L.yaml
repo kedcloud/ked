@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  awsamplifygraphql201902281UserPoolClientLambdaM71LL56UP07L:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs6.10
+      CodeUri: .
+      Description: ''
+      MemorySize: 128
+      Timeout: 300
+      Role: >-
+        arn:aws:iam::575789547500:role/cognito93458567_userpoolclient_lambda_role-amgraphenv
